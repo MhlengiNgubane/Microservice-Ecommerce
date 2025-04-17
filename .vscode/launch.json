@@ -5,7 +5,8 @@
             "name": "DiscoveryApplication",
             "request": "launch",
             "mainClass": "com.ecommerce.discovery.DiscoveryApplication",
-            "projectName": "discovery"
+            "projectName": "discovery",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=53261 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=discovery"
         },
         {
             "type": "java",
@@ -14,6 +15,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.ecommerce.configserver.ConfigServerApplication",
             "projectName": "config-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CustomerApplication<customer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecommerce.ecommerce.CustomerApplication",
+            "projectName": "customer",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
